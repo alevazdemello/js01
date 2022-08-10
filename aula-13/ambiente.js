@@ -6,7 +6,7 @@ do {
 
 
 /* 
-
+OUTRA FORMA DE RODAR ->
 var c = 1
 while (c <= 13 ) {
   console.log(`Passo ${c}`)
