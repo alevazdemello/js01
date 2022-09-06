@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
+
+body {
+  background-image: linear-gradient(#e4e4e4 1px, transparent 1px),
+    linear-gradient(90deg, #e4e4e4 1px, transparent 1px);
+  background-size: 10px 10px, 10px 10px, 2px 2px, 2px 2px;
+  font-family: 'Arimo', sans-serif;
+
+}
+
+header {
+  color: rgb(126, 154, 179);
+  text-align: center;
+  font-size: 70px;
+}
+
+section {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+  box-shadow: 3px 3px 10px rgb(99, 96, 96);
+
+}
+
+footer {
+  color: aliceblue;
+  text-align: center;
+  font-style: italic;
+}
+
+div {
+  text-align: justify;
+}
+
+p {
+  text-align: center;
+}
+
+#seltab {
+  text-align: center;
+  border: none;
+  overflow: hidden;
+  margin-left: 175px;
+}
