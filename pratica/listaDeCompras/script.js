@@ -29,3 +29,4 @@ function registro() {
 }
 
 btRegistrar.addEventListener("click", registro);
+
