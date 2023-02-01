@@ -1,0 +1,19 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #faa307;
+    
+    color: #1d3557;
+    text-align: center;
+}
+
+
+
+.box {
+    background-color: #ABC9FF;
+    border-style: double;
+    border-radius: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    
+}
