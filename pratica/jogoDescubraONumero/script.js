@@ -34,6 +34,11 @@ function apostarNumero() {
         outDica.textContent = "Parabéns! Número sorteado: " + sorteado;
     } else {
         //se o numero existe no vetor erros
+        /* 
+        Caso o número apostado não corresponda ao
+sorteado, utilizamos o método indexOf() discutido nesta seção. Se o retorno do indexOf() for maior ou igual a zero, signica que o número 
+apostado já consta no vetor e a mensagem de alerta é exibida        
+        */
         if (erros.indexOf(numero) >= 0) {
             alert("Você já apostou o número " + numero + ". Tente outro valor...");
         } else {
