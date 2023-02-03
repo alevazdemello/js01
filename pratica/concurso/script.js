@@ -45,23 +45,46 @@ btListar.addEventListener("click", listarTodos);
 
 
 function aprovados() {
-    var notaAprovacao = prompt("Número de acertos para aprovação?");
 
-    if (notaAprovacao == "") {
-        alert("Informações inválidas");
+    if (relacao.length == 0) {
+        alert("A relação de aprovados está vazia.");
         inCandidato.focus();
         return;
     }
 
-    lista = "";
+    var notaAprovacao = Number(prompt("Número de acertos para aprovação?"));
 
-    for (var i = 0; i < relacao.length; i++) {
-        if (relacao[i].acertos >= notaAprovacao) {
-            lista += relacao[i].candidato + relacao[i].acertos;
+    if (notaAprovacao == 0 || isNaN(notaAprovacao)) {
+        alert("Número Inválido");
+        inCandidato.focus();
+        return;
+    }
+
+
+    var copia = relacao.slice();
+
+    copia.sort(function (a, b) { return a.acertos - b.acertos });
+
+    copia.reverse();
+
+    var aprovados = "";
+
+    
+    for (var i = 0; i < copia.length; i++) {
+        if (copia[i].acertos >= notaAprovacao) {
+            aprovados += copia[i].candidato + " - " + copia[i].acertos + " Acertos\n";
         }
     }
 
-    document.getElementById("outRes").textContent = lista;
+    var outRes = document.getElementById("outRes");
+
+    if (aprovados == "") {
+        outRes.textContent = "Não há candidatos aprovados";
+        } else {
+            outRes.textContent = aprovados;
+        }
+
+   // document.getElementById("outRes").textContent = lista;
 }
 
 btAprovados.addEventListener("click", aprovados);
