@@ -1,19 +1,21 @@
-function gerarCracha() {
-    inNome = document.getElementById("inNome");
-    nome = inNome.value;
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    if (nome == "" || nome.indexOf(" ") == -1) {
-        alert("Informe o nome completo do participante");
-        inNome.focus();
-        return;
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa nome no Crachá</title>
+</head>
 
-    var priEspaco = nome.indexOf(" ");
-    var ultEspaco = nome.lastIndexOf(" ");
+<body>
+    <h1>Programa nome no Crachá</h1>
+    <p>Nome do participante: <input type="text" id="inNome"></p>
+    <input type="button" value="Gerar Crachá" id="btGerar">
+    <h3 id="outRes"></h3>
 
-    var cracha = nome.substr(0, priEspaco) + nome.substr(ultEspaco);
+    <script src="script.js"></script>
 
-    document.getElementById("outRes").textContent = "Crachá: " + cracha;
-}
+</body>
 
-btGerar.addEventListener("click", gerarCracha);
+</html>
