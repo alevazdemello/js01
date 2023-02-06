@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(194, 175, 175);
+}
+
+div {
+    background-color: red;
+    display: grid;
+    place-items: center;
+}
+
