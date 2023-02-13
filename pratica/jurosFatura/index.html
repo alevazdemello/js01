@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta em Atraso</title>
+</head>
+<body>
+    <h1>Conta em Atraso</h1>
+    <p>Data de vencimento: <input type="date" id="inData" autofocus></p>
+    <p>Valor da Conta: <input type="number" id="inValor"></p>
+    <input type="button" value="Calcular data limite + valor com desconto" id="btCalcular">
+
+    <p>Valor da multa R$: <input type="text" id="outMulta" class="aDireta" readonly></p>
+    <p>Valor do juros R$: <input type="text" id="outJuros" class="aDireta" readonly></p>
+    <p>Total a pagar R$: <input type="text" id="outTotal" readonly></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
