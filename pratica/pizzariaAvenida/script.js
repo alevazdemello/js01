@@ -30,6 +30,44 @@ function mostrarNumSabores() {
 var inDetalhes = document.getElementById("inDetalhes");
 inDetalhes.addEventListener("focus", mostrarNumSabores);
 
-inDetalhes.addEventListener("blur", function() {
+inDetalhes.addEventListener("blur", function () {
     inDetalhes.placeholder = "";
+})
+
+inDetalhes.addEventListener("keypress", function (tecla) {
+    if (tecla.keyCode == 13) {
+        adicionarItem();
+    }
 });
+
+
+function adicionarItem() {
+    var inPizza = document.getElementById("inPizza");
+    var inBebida = document.getElementById("inBebida");
+    var outPedido = document.getElementById("outPedido");
+
+    if (rbPizza.checked) {
+        var num = inPizza.selectedIndex;
+        var produto = inPizza.options[num].text;
+    }
+    var detalhes = inDetalhes.value;
+    itens.push(produto + " (" + detalhes + ")");
+    outPedido.textContent = itens.join("\n");
+    limparCampos();
+}
+var btAdicionar = document.getElementById("btAdicionar");
+btAdicionar.addEventListener("click", adicionarItem);
+
+function limparCampos() {
+    rbPizza.checked = true;
+    inBebida.className = "oculta";
+    inPizza.className = "exibe";
+    inPizza.selectedIndex = 0;
+    inDetalhes.value = "";
+    rbPizza.focus();
+}
+
+// propriedade placeholder do campo.
+/*Para obter o conteúdo do campo select, utilizamos duas propriedades:
+uma retorna o número do item selecionado (selectedIndex) e outra o
+texto contido nesse item (options[num].text). */
