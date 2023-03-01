@@ -1,0 +1,15 @@
+body {
+    background-color: red;
+}
+
+.oculta { 
+    display: none; 
+}
+
+.exibe {
+     display: inline; 
+    }
+
+.exibeLinha { 
+    display: block; 
+} 
